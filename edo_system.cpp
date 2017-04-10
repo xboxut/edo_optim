@@ -1086,3 +1086,45 @@ postfix_type * edo_system::func_conversion( int mode,int func_nb,int *pile_size)
 
 
 }
+
+
+
+/*****************************************************
+	*****MODE DEBUG, FONCTION TEST POUR L'OPTIMISATION***/
+
+	/*static double rosenbrock2(double x,double y);
+	 * 
+	 * Fonction de rosenbrock 2d (a-x)^2+b(y-x^2)^2	
+	 *  minimum en x=1,y=1.
+	 * 
+	 * */
+ double edo_system::rosenbrock2(double x,double y)
+ {
+ 
+  return (1.0-x)*(1.0-x)+100.0*(y-x*x)*(y-x*x);
+ }
+	
+	/*static double rosenbrock3(double x,double y,double z);
+	 * 
+	 * Fonction de rosenbrock 2d (a-x)^2+b(y-x^2)^2	
+	 *  minimum en x=1,y=1, z=1.
+	 * 
+	 * */	
+double edo_system::rosenbrock3(double x,double y,double z)
+{
+	
+	  return (1.0-x)*(1.0-x)+100.0*(y-x*x)*(y-x*x)+(1.0-y)*(1.0-y)+100.0*(z-y*y)*(z-y*y);
+	
+}
+	
+	/*static double eggholder2(double x,double y);
+	 * 
+	 * Minimum a x=512,y=404.23 f()=-959.6407 
+	 */
+double edo_system::eggholder2(double x,double y)
+{
+	
+	
+	return -(y+47.0)*sin(sqrt(abs(x/2.0+(x+47.0))))-x*sin(sqrt(abs(x-(y+47.0))));
+}
+

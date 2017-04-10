@@ -279,6 +279,31 @@ utilisateurs.
 	
 
 	static double evaluate_usr_fcn(int fct_nb,double *var, double *cn,double *t,double *fctarg,int argnb);
+	
+	
+	/*****************************************************
+	*****MODE DEBUG, FONCTION TEST POUR L'OPTIMISATION***/
 
+	/*static double rosenbrock2(double x,double y);
+	 * 
+	 * Fonction de rosenbrock 2d (a-x)^2+b(y-x^2)^2	
+	 *  minimum en x=1,y=1.
+	 * 
+	 * */
+	static double rosenbrock2(double x,double y);
+	
+	/*static double rosenbrock3(double x,double y,double z);
+	 * 
+	 * Fonction de rosenbrock 2d (a-x)^2+b(y-x^2)^2	
+	 *  minimum en x=1,y=1, z=1.
+	 * 
+	 * */	
+	static double rosenbrock3(double x,double y,double z);
+	
+	/*static double eggholder2(double x,double y);
+	 * 
+	 * Minimum a x=512,y=404.23 f()=-959.6407 
+	 */
+	static double eggholder2(double x,double y);
 	
 };
