@@ -1,0 +1,45 @@
+% definition des var %
+
+var nomderoutine;
+var b; 
+var c;
+
+
+
+%parametre***********************************%
+param c_a=-10;
+param c_b=-10;
+
+
+%definition des fonctions utilisateurs ******%
+
+func nom(param1,param2,param3)=param1*2+param2*param3;
+
+%equation-diff---------------------%
+
+
+%equa dnomderoutine sin(cos(2,3)/3*3.1415);%
+equa dnomderoutine c_a*nom(1,2,3);
+
+%equa dnomderoutine -1^2*(2+3)*4;%
+
+
+%equa dnomderoutine -c_a*(c+c_b)*b;%
+
+%equa db toto*(-b)+tata*+b;%
+
+
+optim_dom c_a=1e-4:1e4;
+
+
+init_cond nomderoutine=910;
+
+
+%donnee experimentales *********************%
+experim_data b  
+0.0 -3
+0.1 -2
+0.2 -1;
+
+
+optim_max_run	123456;
