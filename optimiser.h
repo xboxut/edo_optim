@@ -28,11 +28,14 @@ class optimiser
 	FILE *numsol_save; //fichier pour sauvegarder des solutions numeriques des equa diff (pour verification)
 	FILE *continue_compute;// fichier binaire pour redemarrer un calcul en cours a voir comment on l utilise!
 	
+
 	
 	
 	double **param_array;// tableau de parametre qui peut servir a l'optimisation de maniere generale.
+	double param_array_size[2];
 	double *score;// tableau pour stocker le score, peut être utile pour l'algo d'optim.
 	
+	int sync_count; //compteur a partir duquel on trasnfere des donnees
 	 
 	
 	/*********OPTIMISATION MONTE CARLO ***********/
