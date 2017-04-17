@@ -144,7 +144,7 @@ C                 SUPPLY A DUMMY SUBROUTINE IF IOUT=0.
 C                 IT MUST HAVE THE FORM
 C                    SUBROUTINE SOLOUT (NR,XOLD,X,Y,RC,LRC,IC,LIC,N,
 C                                       RPAR,IPAR,IRTRN)
-C                    DOUBLE PRECISION X,Y(N),
+C                    DOUBLE PRECISION X,Y(N),RC(LRC),IC(LIC)
 C                    ....  
 C                 SOLOUT FURNISHES THE SOLUTION "Y" AT THE NR-TH
 C                    GRID-POINT "X" (THEREBY THE INITIAL VALUE IS
@@ -349,10 +349,6 @@ C *** *** *** *** *** *** *** *** *** *** *** *** ***
       DIMENSION RPAR(*),IPAR(*)
       LOGICAL AUTNMS,IMPLCT,ARRET,JBAND
       EXTERNAL FCN,JAC,MAS,SOLOUT
-      
-    
-
-
 C *** *** *** *** *** *** ***
 C        SETTING THE PARAMETERS 
 C *** *** *** *** *** *** ***

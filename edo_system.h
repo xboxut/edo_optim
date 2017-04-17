@@ -282,6 +282,15 @@ utilisateurs.
 	
 	
 	/*****************************************************
+	 ***** TRAITEMENT DES EDO ***************************/
+	 
+	 /* SEULEX EST A INTEGRER ICI */
+	 
+	 double exp_comp_diff(){return 0;} // FONCTION AD HOC POUR REMPLACER SEULEX ET LA DIFFERENCE Calcul/experience obtenue
+	 
+	 
+	
+	/*****************************************************
 	*****MODE DEBUG, FONCTION TEST POUR L'OPTIMISATION***/
 
 	/*static double rosenbrock2(double x,double y);

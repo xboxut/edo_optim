@@ -8,9 +8,7 @@ class optimiser
 {
 	public:
 	
-	script_interperter *scptint;
-	
-	int n_proc;//nombre de processus
+	script_interpreter *scptint;
 	
 	unsigned long int *seed;//graines pour le gene de nombre alea
 	
@@ -31,21 +29,31 @@ class optimiser
 
 	
 	
-	double **param_array;// tableau de parametre qui peut servir a l'optimisation de maniere generale.
+	double *param_array;// tableau de parametre qui peut servir a l'optimisation de maniere generale.
 	double param_array_size[2];
-	double *score;// tableau pour stocker le score, peut être utile pour l'algo d'optim.
-	
-	int sync_count; //compteur a partir duquel on trasnfere des donnees
 	 
 	
+	int comput_per_proc; //compteur a partir duquel on trasnfere des donnees peut etre utilise par certains algorithmes
+	
+	
 	/*********OPTIMISATION MONTE CARLO ***********/
-	int init_mc_optimiser(int rank);
+	int init_mc_optimiser(int rank,int numtask);
+	int init_mc_optimiser_debug(int rank,int numtask);
 	int run_mc_optimiser(int rank);
 	int run_mc_optimiser_debug(int rank);
-	int mc_optimiser();
+	int mc_optimiser(int argc, char *argv[],int comput_per_proca, int debug);
 	/*********************************************/
 	optimiser();// constructeur par defaut -> ne fait rien a part mettre tout les pointeurs a null
-	init_optimiser(script_interpreter *scpint); // Routine pour initialiser l'optimiser
+	
+	/*int init_optimiser(script_interpreter *scpint); // Routine pour initialiser l'optimiser 
+	Routine pour initialiser l optimiser en fonction des donnees de l interpreteur de script.
+	
+	A FAIRE !!!
+	
+	*/
+	int init_optimiser(script_interpreter *scpint); 
+	
+	
 	~optimiser();//destructeur -> supprime la mémoire allouée.
 	
 	
